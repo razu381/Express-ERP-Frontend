@@ -49,7 +49,6 @@ src/Dashboard/employee/PaymentHistory.jsx
 src/Dashboard/employee/WorkTable.jsx
 src/Dashboard/employee/Worksheet.jsx
 src/Hooks/useAuthData.jsx
-src/Hooks/useAxiosPublic.jsx
-src/Hooks/useAxiosSecure.jsx
+
 src/Hooks/useCheckRole.jsx
 
