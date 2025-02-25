@@ -3,9 +3,10 @@ import { AuthContext } from "./AuthProvider";
 import { Navigate, useLocation, useParams } from "react-router-dom";
 import useCheckRole from "../Hooks/useCheckRole";
 import Loader from "../Components/shared/Loader";
+import Swal from "sweetalert2";
 
 function EmployeeRoute({ children }) {
-  let { user, loading } = useContext(AuthContext);
+  let { user, loading, LogOut } = useContext(AuthContext);
   let { userRole, isRoleLoading } = useCheckRole();
   console.log(userRole, isRoleLoading);
 
@@ -22,6 +23,18 @@ function EmployeeRoute({ children }) {
     return children;
   }
 
+  async function handleLogout() {
+    try {
+      await LogOut();
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  handleLogout();
+
+  Swal.fire(
+    "You don't have access to employee dashboard. Redirecting to login"
+  );
   return <Navigate to="/login" state={{ from: location }} />;
 }
 export default EmployeeRoute;
