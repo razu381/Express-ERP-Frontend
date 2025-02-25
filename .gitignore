@@ -25,14 +25,7 @@ dist-ssr
 
 
 #temporary
-src/Auth/AdminRouter.jsx
-src/Auth/AuthProvider.jsx
-src/Auth/EmployeeRoute.jsx
-src/Auth/HrRouter.jsx
-src/Components/Header.jsx
-src/Components/LogIn.jsx
-src/Components/SignUp.jsx
-src/Components/shared/Footer.jsx
+
 src/Components/shared/GoogleLogin.jsx
 src/Components/shared/Loader.jsx
 src/Components/shared/UsersList.jsx
