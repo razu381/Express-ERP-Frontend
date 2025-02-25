@@ -52,6 +52,4 @@ src/Hooks/useAuthData.jsx
 src/Hooks/useAxiosPublic.jsx
 src/Hooks/useAxiosSecure.jsx
 src/Hooks/useCheckRole.jsx
-src/Pages/Home/Hero.jsx
-src/Pages/Home/Home.jsx
-src/Pages/Home/Services.jsx
+
