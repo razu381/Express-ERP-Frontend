@@ -26,10 +26,8 @@ dist-ssr
 
 #temporary
 
-src/Dashboard/Admin/AllEmployeeList.jsx
 src/Dashboard/Admin/CheckoutForm.jsx
 src/Dashboard/Admin/Payment.jsx
-src/Dashboard/Admin/Payroll.jsx
 
 
 
