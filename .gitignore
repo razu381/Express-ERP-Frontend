@@ -26,10 +26,6 @@ dist-ssr
 
 #temporary
 
-src/Components/shared/GoogleLogin.jsx
-src/Components/shared/Loader.jsx
-src/Components/shared/UsersList.jsx
-src/Components/shared/dummy.json
 src/Dashboard/Admin/AllEmployeeList.jsx
 src/Dashboard/Admin/CheckoutForm.jsx
 src/Dashboard/Admin/Payment.jsx
