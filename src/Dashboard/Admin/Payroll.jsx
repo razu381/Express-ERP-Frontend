@@ -39,7 +39,24 @@ function Payroll() {
 
   function handleAdminPay(data) {
     setCurrentRowData(data);
-    setIsOpen(true);
+    console.log("data before axios ------- ", data);
+    axiosSecure
+      .post("/payment-check-paid", data)
+      .then((res) => {
+        if (res.data?.isPaid) {
+          let isoString = res.data?.paidByAdminDate;
+          let newDate = new Date(isoString);
+          let date = newDate.toLocaleString();
+          Swal.fire(
+            `
+            You have already paid this at ${date} with transaction id of ${res.data?.transactionId}
+            `
+          );
+        } else {
+          setIsOpen(true);
+        }
+      })
+      .catch((err) => console.log(err));
   }
 
   function onSuccessPay(id, transactionId) {
