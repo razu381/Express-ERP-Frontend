@@ -30,8 +30,7 @@ src/Dashboard/Admin/AllEmployeeList.jsx
 src/Dashboard/Admin/CheckoutForm.jsx
 src/Dashboard/Admin/Payment.jsx
 src/Dashboard/Admin/Payroll.jsx
-src/Dashboard/Hr/EmployeeList.jsx
-src/Dashboard/Hr/WorkProgress.jsx
+
 
 
 
