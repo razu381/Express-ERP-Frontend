@@ -46,7 +46,6 @@ src/Dashboard/Hr/EmployeeDetails.jsx
 src/Dashboard/Hr/EmployeeList.jsx
 src/Dashboard/Hr/WorkProgress.jsx
 src/Dashboard/employee/PaymentHistory.jsx
-src/Dashboard/employee/WorkTable.jsx
-src/Dashboard/employee/Worksheet.jsx
+
 
 
