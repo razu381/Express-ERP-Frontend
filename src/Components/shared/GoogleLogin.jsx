@@ -13,9 +13,11 @@ function GoogleLogin({ title }) {
   function handleGoogle() {
     loginWithGoogle()
       .then((data) => {
+        //console.log(data);
         axiosPublic
           .get(`users/${data?.user.email}`)
           .then((res) => {
+            console.log(res);
             if (!res.data) {
               axiosPublic
                 .post("/users", {
@@ -25,6 +27,8 @@ function GoogleLogin({ title }) {
                   designation: "Digital Marketer",
                   salary: 250000,
                   bank_account: "IBNA-3435354343-343434343-33",
+                  isVerified: false,
+                  photo: data?.user?.photoURL,
                 })
                 .then((res) => {
                   console.log(res.data);

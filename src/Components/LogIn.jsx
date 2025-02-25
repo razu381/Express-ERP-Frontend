@@ -11,9 +11,11 @@ import Swal from "sweetalert2";
 
 function LogIn() {
   let { signIn } = useContext(AuthContext);
-  let location = useLocation().state;
+  let location = useLocation().state?.from?.pathname;
   let navigate = useNavigate();
   let axiosPublic = useAxiosPublic();
+
+  console.log(location);
 
   const {
     register,

@@ -2,11 +2,11 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="bg-gray-100">
-      <div class="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
-        <div class="flex justify-center text-teal-600">
+    <footer className="bg-gray-100">
+      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+        <div className="flex justify-center text-teal-600">
           <svg
-            class="h-8"
+            className="h-8"
             viewBox="0 0 118 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -54,44 +54,62 @@ function Footer() {
           </svg>
         </div>
 
-        <p class="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
+        <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-gray-500">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Incidunt
           consequuntur amet culpa cum itaque neque.
         </p>
 
-        <ul class="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
+        <ul className="mt-12 flex flex-wrap justify-center gap-6 md:gap-8 lg:gap-12">
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               About
             </a>
           </li>
 
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               Careers
             </a>
           </li>
 
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               History
             </a>
           </li>
 
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               Services
             </a>
           </li>
 
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               Projects
             </a>
           </li>
 
           <li>
-            <a class="text-gray-700 transition hover:text-gray-700/75" href="#">
+            <a
+              className="text-gray-700 transition hover:text-gray-700/75"
+              href="#"
+            >
               Blog
             </a>
           </li>
