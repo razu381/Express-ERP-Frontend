@@ -26,8 +26,6 @@ dist-ssr
 
 #temporary
 
-src/Dashboard/Admin/CheckoutForm.jsx
-src/Dashboard/Admin/Payment.jsx
 
 
 
