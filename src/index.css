@@ -1,1 +1,9 @@
 @import "tailwindcss";
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.ReactModal__Content {
+  margin: 10%;
+}
