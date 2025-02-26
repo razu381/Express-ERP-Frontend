@@ -9,7 +9,7 @@ const axiosSecure = axios.create({
 
 function useAxiosSecure() {
   let navigate = useNavigate();
-  let { logOut } = useAuthData();
+  let { LogOut } = useAuthData();
 
   axiosSecure.interceptors.request.use(
     function (config) {
@@ -31,7 +31,7 @@ function useAxiosSecure() {
       let status = error.response.status;
       console.log("Status error in the interceptor", status);
       if (status === 401 || status === 403) {
-        await logOut();
+        await LogOut();
         navigate("/login");
         console.log(error);
       }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -20,19 +21,19 @@ function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap justify-center gap-4">
-            <a
+            <Link
               className="block w-full rounded-sm bg-red-600 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-red-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-              href="#"
+              to="/contact"
             >
               Contact us
-            </a>
+            </Link>
 
-            <a
+            <Link
               className="block w-full rounded-sm px-12 py-3 text-sm font-medium text-red-600 shadow-sm hover:text-red-700 focus:ring-3 focus:outline-hidden sm:w-auto"
-              href="#"
+              to="/dashboard/profile"
             >
               Dashboard
-            </a>
+            </Link>
           </div>
         </div>
       </div>

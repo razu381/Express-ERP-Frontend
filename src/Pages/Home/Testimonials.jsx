@@ -10,7 +10,7 @@ function Testimonials() {
   return (
     <div>
       <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl py-10 lg:py-14">
-        Our services
+        Testimonials
       </h2>
       <div>
         <Swiper

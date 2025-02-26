@@ -18,6 +18,7 @@ import EmployeeRoute from "../Auth/EmployeeRoute";
 import HrRouter from "../Auth/HrRouter";
 import AdminRouter from "../Auth/AdminRouter";
 import Contact from "../Pages/Contact/Contact";
+import Profile from "../Dashboard/Profile";
 
 function Router() {
   const routersystem = createBrowserRouter([
@@ -47,6 +48,10 @@ function Router() {
       path: "/dashboard",
       element: <Dashboard />,
       children: [
+        {
+          path: "profile",
+          element: <Profile />,
+        },
         {
           path: "worksheet",
           element: (

@@ -8,12 +8,8 @@ import Swal from "sweetalert2";
 function EmployeeRoute({ children }) {
   let { user, loading, LogOut } = useContext(AuthContext);
   let { userRole, isRoleLoading } = useCheckRole();
-  console.log(userRole, isRoleLoading);
 
   let location = useLocation();
-
-  console.log("user loading = ", loading);
-  console.log("Roleloading = ", isRoleLoading);
 
   if (loading || isRoleLoading) {
     return <Loader />;
