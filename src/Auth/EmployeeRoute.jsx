@@ -26,7 +26,7 @@ function EmployeeRoute({ children }) {
       console.log(err);
     }
   }
-  handleLogout();
+  //handleLogout();
 
   Swal.fire(
     "You don't have access to employee dashboard. Redirecting to login"

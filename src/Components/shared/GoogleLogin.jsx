@@ -11,6 +11,7 @@ function GoogleLogin({ title }) {
   let axiosPublic = useAxiosPublic();
 
   function handleGoogle() {
+    localStorage.setItem("userRole", "Employee");
     loginWithGoogle()
       .then((data) => {
         //console.log(data);
@@ -23,7 +24,7 @@ function GoogleLogin({ title }) {
                 .post("/users", {
                   name: data.user.displayName,
                   email: data.user.email,
-                  role: "employee",
+                  role: "Employee",
                   designation: "Digital Marketer",
                   salary: 250000,
                   bank_account: "IBNA-3435354343-343434343-33",

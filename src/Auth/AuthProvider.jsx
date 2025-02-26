@@ -50,22 +50,35 @@ function AuthProvider({ children }) {
     let unsubscribe = onAuthStateChanged(auth, (CurrUser) => {
       setUser(CurrUser);
       if (CurrUser?.email) {
-        axiosPublic
-          .get(`/users/role/${CurrUser.email}`)
-          .then((res) => {
-            setUserRole(res.data?.role);
-            axiosPublic
-              .post("/jwt", { email: CurrUser.email, role: res.data.role })
-              .then((res) => {
-                localStorage.setItem("access-token", res.data?.token);
-                setLoading(false);
-              })
-              .catch((err) => console.log(err));
-          })
-          .catch((err) => console.log(err));
+        const storedRole = localStorage.getItem("userRole");
+        if (storedRole) {
+          setUserRole(storedRole);
+          axiosPublic
+            .post("/jwt", { email: CurrUser.email, role: storedRole })
+            .then((res) => {
+              localStorage.setItem("access-token", res.data?.token);
+              setLoading(false);
+            })
+            .catch((err) => console.log(err));
+        } else {
+          axiosPublic
+            .get(`/users/role/${CurrUser.email}`)
+            .then((res) => {
+              setUserRole(res.data?.role);
+              axiosPublic
+                .post("/jwt", { email: CurrUser.email, role: res.data?.role })
+                .then((res) => {
+                  localStorage.setItem("access-token", res.data?.token);
+                  setLoading(false);
+                })
+                .catch((err) => console.log(err));
+            })
+            .catch((err) => console.log(err));
+        }
       } else {
         setUserRole(null);
         localStorage.removeItem("access-token");
+        localStorage.removeItem("userRole");
         setLoading(false);
       }
     });

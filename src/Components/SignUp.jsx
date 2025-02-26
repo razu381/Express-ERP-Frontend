@@ -32,22 +32,27 @@ function Signup() {
   });
 
   const onSubmit = async (user) => {
+    localStorage.setItem("userRole", user?.role);
     console.log(user);
     let imageLink;
-    const formData = new FormData();
-    formData.append("image", user.displayUrl[0]);
+    if (user.displayUrl[0]) {
+      const formData = new FormData();
+      formData.append("image", user.displayUrl[0]);
 
-    let res = await axiosPublic.post(
-      `https://api.imgbb.com/1/upload?key=${imageApi}`,
-      formData,
-      {
-        headers: {
-          "content-type": "multipart/form-data",
-        },
-      }
-    );
+      let res = await axiosPublic.post(
+        `https://api.imgbb.com/1/upload?key=${imageApi}`,
+        formData,
+        {
+          headers: {
+            "content-type": "multipart/form-data",
+          },
+        }
+      );
 
-    imageLink = res.data.data.display_url;
+      imageLink = res.data.data.display_url;
+    } else {
+      imageLink = "https://i.ibb.co.com/fGBWg7VP/profile.png";
+    }
 
     if (imageLink) {
       userSignUp(user.email, user.pass)
@@ -73,7 +78,7 @@ function Signup() {
                 .then((res) => {
                   if (res.data.insertedId) {
                     toast.success("user signed up successfully");
-                    navigate("/dashboard/worksheet");
+                    navigate("/dashboard/profile");
                   }
                 })
                 .catch((err) => {

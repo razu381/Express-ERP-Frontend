@@ -42,7 +42,7 @@ function LogIn() {
           if (location) {
             navigate(location);
           } else {
-            navigate("/");
+            navigate("/dashboard/profile");
           }
         })
         .catch((err) => {
