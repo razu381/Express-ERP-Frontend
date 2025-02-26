@@ -15,6 +15,7 @@ import Loader from "../../Components/shared/Loader";
 
 function AllEmployeeList() {
   let axiosSecure = useAxiosSecure();
+  let [isTableView, setTableView] = useState(true);
   const [pagination, setPagination] = useState({
     pageIndex: 0,
     pageSize: 5,
@@ -201,97 +202,154 @@ function AllEmployeeList() {
 
   return (
     <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">
-        All Employee List
-      </h2>
-      <div className="overflow-x-auto w-full">
-        {workListHR.length > 0 ? (
-          <table className="table table-zebra w-full">
-            <thead className=" text-white">
-              {table.getHeaderGroups().map((headerGroup) => (
-                <tr key={headerGroup.id}>
-                  {headerGroup.headers.map((header) => {
-                    return (
-                      <th key={header.id} className="py-3 px-5 text-black">
-                        <div className=" mb-2">
-                          {flexRender(
-                            header.column.columnDef.header,
-                            header.getContext()
-                          )}
-                        </div>
-                      </th>
-                    );
-                  })}
-                </tr>
-              ))}
-            </thead>
-            <tbody>
-              {table.getRowModel().rows.map((row) => (
-                <tr key={row.id}>
-                  {row.getVisibleCells().map((cell) => (
-                    <td key={cell.id} className="py-3 px-5">
-                      {flexRender(
-                        cell.column.columnDef.cell,
-                        cell.getContext()
-                      )}
-                    </td>
-                  ))}
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        ) : (
-          <div>No employees found.</div>
-        )}
-        <div className="flex justify-between">
-          <div className="pagination-controls flex gap-3">
-            <button
-              onClick={() => table.firstPage()}
-              disabled={!table.getCanPreviousPage()}
-            >
-              {"<<"}
-            </button>
-            <button
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-              className="text-blue-600 font-bold"
-            >
-              {"<"}
-            </button>
-            <span>
-              Page {table.getState().pagination.pageIndex + 1} of{" "}
-              {table.getPageCount()}
-            </span>
-            <button
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-              className="text-blue-600 font-bold"
-            >
-              {">"}
-            </button>
-            <button
-              onClick={() => table.lastPage()}
-              disabled={!table.getCanNextPage()}
-            >
-              {">>"}
-            </button>
-          </div>
+      <div className="flex justify-between items-center gap-5">
+        <h2 className="text-center py-5 text-xl md:text-3xl font-bold">
+          All Employee List
+        </h2>
+        <button
+          className="btn btn-primary"
+          onClick={() => setTableView(!isTableView)}
+        >
+          {isTableView ? "Card View" : "Table View"}
+        </button>
+      </div>
 
-          {/* Step 5: Page Size Selector */}
-          <div>
-            <select
-              value={table.getState().pagination.pageSize}
-              onChange={(e) => table.setPageSize(Number(e.target.value))}
-            >
-              {[5, 10, 20, 30, 40, 50].map((pageSize) => (
-                <option key={pageSize} value={pageSize}>
-                  Show {pageSize}
-                </option>
-              ))}
-            </select>
+      {isTableView ? (
+        <div className="overflow-x-auto w-full">
+          {workListHR.length > 0 ? (
+            <table className="table table-zebra w-full">
+              <thead className=" text-white">
+                {table.getHeaderGroups().map((headerGroup) => (
+                  <tr key={headerGroup.id}>
+                    {headerGroup.headers.map((header) => {
+                      return (
+                        <th key={header.id} className="py-3 px-5 text-black">
+                          <div className=" mb-2">
+                            {flexRender(
+                              header.column.columnDef.header,
+                              header.getContext()
+                            )}
+                          </div>
+                        </th>
+                      );
+                    })}
+                  </tr>
+                ))}
+              </thead>
+              <tbody>
+                {table.getRowModel().rows.map((row) => (
+                  <tr key={row.id}>
+                    {row.getVisibleCells().map((cell) => (
+                      <td key={cell.id} className="py-3 px-5">
+                        {flexRender(
+                          cell.column.columnDef.cell,
+                          cell.getContext()
+                        )}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <div>No employees found.</div>
+          )}
+          <div className="flex justify-between">
+            <div className="pagination-controls flex gap-3">
+              <button
+                onClick={() => table.firstPage()}
+                disabled={!table.getCanPreviousPage()}
+              >
+                {"<<"}
+              </button>
+              <button
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+                className="text-blue-600 font-bold"
+              >
+                {"<"}
+              </button>
+              <span>
+                Page {table.getState().pagination.pageIndex + 1} of{" "}
+                {table.getPageCount()}
+              </span>
+              <button
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+                className="text-blue-600 font-bold"
+              >
+                {">"}
+              </button>
+              <button
+                onClick={() => table.lastPage()}
+                disabled={!table.getCanNextPage()}
+              >
+                {">>"}
+              </button>
+            </div>
+
+            {/* Step 5: Page Size Selector */}
+            <div>
+              <select
+                value={table.getState().pagination.pageSize}
+                onChange={(e) => table.setPageSize(Number(e.target.value))}
+              >
+                {[5, 10, 20, 30, 40, 50].map((pageSize) => (
+                  <option key={pageSize} value={pageSize}>
+                    Show {pageSize}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+          {workListHR.map((employee) => (
+            <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+              <div className="flex flex-col gap-2">
+                <h3>
+                  <span className="mt-4 font-bold">Name</span>: {employee?.name}
+                </h3>
+
+                <h3>
+                  <span className="mt-4 font-bold">Designation</span>:{" "}
+                  {employee?.designation}
+                </h3>
+                {employee?.role === "HR" ? (
+                  <h2 className="font-bold">Role: HR</h2>
+                ) : (
+                  <button
+                    className="w-fullpx-3 py-2 bg-purple-600  text-white"
+                    onClick={() => handleFireHR(employee._id, "HR")}
+                  >
+                    Make HR
+                  </button>
+                )}
+                {employee?.role === "fired" ? (
+                  <h2 className="font-bold text-red-600">Fired</h2>
+                ) : (
+                  <button
+                    className="w-fullpx-3 py-2 bg-purple-600  text-white"
+                    onClick={() => handleFireHR(employee._id, "fired")}
+                  >
+                    Fire
+                  </button>
+                )}
+
+                <button
+                  className="btn bg-purple-600 text-white"
+                  onClick={() =>
+                    handleSalaryIncrement(employee?._id, employee?.salary)
+                  }
+                >
+                  Increase Salary
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

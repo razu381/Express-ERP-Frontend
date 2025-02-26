@@ -35,6 +35,6 @@ function EmployeeRoute({ children }) {
   Swal.fire(
     "You don't have access to employee dashboard. Redirecting to login"
   );
-  return <Navigate to="/login" state={{ from: location }} />;
+  return <Navigate to="/login" />;
 }
 export default EmployeeRoute;

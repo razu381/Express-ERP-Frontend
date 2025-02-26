@@ -33,6 +33,6 @@ function AdminRouter({ children }) {
   handleLogout();
 
   Swal.fire("You don't have access to admin Dashboard. Redirecting to login");
-  return <Navigate to="/login" state={{ from: location }} />;
+  return <Navigate to="/login" />;
 }
 export default AdminRouter;

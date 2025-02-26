@@ -32,6 +32,6 @@ function HrRouter({ children }) {
   handleLogout();
 
   Swal.fire("You don't have access to HR dashboard. Redirecting to login");
-  return <Navigate to="/login" state={{ from: location }} />;
+  return <Navigate to="/login" />;
 }
 export default HrRouter;
