@@ -17,6 +17,7 @@ import Payroll from "../Dashboard/Admin/Payroll";
 import EmployeeRoute from "../Auth/EmployeeRoute";
 import HrRouter from "../Auth/HrRouter";
 import AdminRouter from "../Auth/AdminRouter";
+import Contact from "../Pages/Contact/Contact";
 
 function Router() {
   const routersystem = createBrowserRouter([
@@ -37,8 +38,8 @@ function Router() {
           element: <Login />,
         },
         {
-          path: "/users",
-          element: <UsersList />,
+          path: "/contact",
+          element: <Contact />,
         },
       ],
     },

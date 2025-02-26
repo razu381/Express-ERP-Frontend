@@ -3,189 +3,124 @@ import React from "react";
 function Services() {
   return (
     <div>
-      <h2>Our services</h2>
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl py-10 lg:py-20">
+        Our services
+      </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {/* service 1 */}
         <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Episode #101
+              Web
             </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
-              <a href="#" className="hover:underline">
-                {" "}
-                Some Interesting Podcast Title{" "}
-              </a>
+              Custom Web Development
             </h3>
 
             <p className="mt-1 text-sm text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-              nulla amet voluptatum sit rerum, atque, quo culpa ut
-              necessitatibus eius suscipit eum accusamus, aperiam voluptas
-              exercitationem facere aliquid fuga. Sint.
+              Elevate your online presence with our Custom Web Development
+              service. We build tailored, responsive websites using modern
+              frameworks, ensuring robust performance, high security, and
+              seamless user experience to drive business growth and
+              engagement.!!!
             </p>
-
-            <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-              <div className="flex items-center gap-1 text-gray-500">
-                <svg
-                  className="size-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-
-                <p className="text-xs font-medium">48:32 minutes</p>
-              </div>
-
-              <span className="hidden sm:block" aria-hidden="true">
-                &middot;
-              </span>
-
-              <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                Featuring-3{" "}
-                <a href="#" className="underline hover:text-gray-700">
-                  Barry
-                </a>
-                ,
-                <a href="#" className="underline hover:text-gray-700">
-                  Sandra
-                </a>{" "}
-                and
-                <a href="#" className="underline hover:text-gray-700">
-                  August
-                </a>
-              </p>
-            </div>
           </div>
         </div>
+        {/* //service 2 */}
         <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Episode #101
+              Web
             </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
-              <a href="#" className="hover:underline">
-                {" "}
-                Some Interesting Podcast Title{" "}
-              </a>
+              Responsive Theme Development
             </h3>
 
             <p className="mt-1 text-sm text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-              nulla amet voluptatum sit rerum, atque, quo culpa ut
-              necessitatibus eius suscipit eum accusamus, aperiam voluptas
-              exercitationem facere aliquid fuga. Sint.
+              Experience stunning visuals and flawless usability with our
+              Responsive Web Design service. We create adaptive, mobile-friendly
+              layouts that captivate users across devices. Our designs blend
+              style and function to deliver vivid digital experiences.!!!!
             </p>
-
-            <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-              <div className="flex items-center gap-1 text-gray-500">
-                <svg
-                  className="size-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-
-                <p className="text-xs font-medium">48:32 minutes</p>
-              </div>
-
-              <span className="hidden sm:block" aria-hidden="true">
-                &middot;
-              </span>
-
-              <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                Featuring-3{" "}
-                <a href="#" className="underline hover:text-gray-700">
-                  Barry
-                </a>
-                ,
-                <a href="#" className="underline hover:text-gray-700">
-                  Sandra
-                </a>{" "}
-                and
-                <a href="#" className="underline hover:text-gray-700">
-                  August
-                </a>
-              </p>
-            </div>
           </div>
         </div>
+        {/* //service 3 */}
         <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Episode #101
+              Graphic
             </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
-              <a href="#" className="hover:underline">
-                {" "}
-                Some Interesting Podcast Title{" "}
-              </a>
+              Graphic Branding Solutions
             </h3>
 
             <p className="mt-1 text-sm text-gray-700">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam
-              nulla amet voluptatum sit rerum, atque, quo culpa ut
-              necessitatibus eius suscipit eum accusamus, aperiam voluptas
-              exercitationem facere aliquid fuga. Sint.
+              Revitalize your brand identity with our Graphic Branding
+              Solutions. Our experts craft logos, dynamic marketing collateral,
+              and unified visuals that capture your brand essence with bold
+              impact! Our team brings your vision to life with striking
+              creativity.!!!!
             </p>
+          </div>
+        </div>
+        {/* //service 4 */}
+        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+          <div>
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              SEO
+            </strong>
 
-            <div className="mt-4 sm:flex sm:items-center sm:gap-2">
-              <div className="flex items-center gap-1 text-gray-500">
-                <svg
-                  className="size-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
+            <h3 className="mt-4 text-lg font-medium sm:text-xl">
+              Advanced SEO Optimization
+            </h3>
 
-                <p className="text-xs font-medium">48:32 minutes</p>
-              </div>
+            <p className="mt-1 text-sm text-gray-700">
+              Boost your online visibility with our Advanced SEO Optimization
+              service. We deliver targeted keyword research, on-page tuning, and
+              backlink building to boost your search ranking. Our SEO experts
+              drive results boosting organic traffic and rankings now.
+            </p>
+          </div>
+        </div>
+        {/* //service 5 */}
+        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+          <div>
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              Marketing
+            </strong>
 
-              <span className="hidden sm:block" aria-hidden="true">
-                &middot;
-              </span>
+            <h3 className="mt-4 text-lg font-medium sm:text-xl">
+              Digital Marketing Strategy
+            </h3>
 
-              <p className="mt-2 text-xs font-medium text-gray-500 sm:mt-0">
-                Featuring-3{" "}
-                <a href="#" className="underline hover:text-gray-700">
-                  Barry
-                </a>
-                ,
-                <a href="#" className="underline hover:text-gray-700">
-                  Sandra
-                </a>{" "}
-                and
-                <a href="#" className="underline hover:text-gray-700">
-                  August
-                </a>
-              </p>
-            </div>
+            <p className="mt-1 text-sm text-gray-700">
+              Maximize your online impact with our Digital Marketing Strategy
+              service. We develop integrated campaigns across multiple channels,
+              leveraging data insights and creative tactics to engage audiences
+              and drive measurable growth for your brand.!!! NOW!!
+            </p>
+          </div>
+        </div>
+        {/* //service 6 */}
+        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+          <div>
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              Marketing
+            </strong>
+
+            <h3 className="mt-4 text-lg font-medium sm:text-xl">
+              Content & Social Media Management
+            </h3>
+
+            <p className="mt-1 text-sm text-gray-700">
+              Enhance your brand’s narrative with our Content & Social Media
+              Management service. We craft compelling content and manage vibrant
+              social channels to foster engagement, build community, and elevate
+              your online reputation with creative storytelling.!!
+            </p>
           </div>
         </div>
       </div>

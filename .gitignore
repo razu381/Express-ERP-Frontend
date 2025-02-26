@@ -27,6 +27,8 @@ dist-ssr
 #temporary
 
 
-
+src/Pages/Contact/Contact.jsx
+src/Pages/Home/FAQ.jsx
+src/Pages/Home/Testimonials.jsx
 
 
