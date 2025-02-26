@@ -12,8 +12,7 @@ This Employee Management Web Application is designed to streamline HR processes,
 
 # Key Features
 
--Secure email and password-based authentication.
-
+- Secure email and password-based authentication.
 - Work Sheet Management: Submit, edit, and delete daily tasks with real-time updates.
 - Payment History: View monthly salary payments with pagination for easy navigation.
   HR Dashboard
