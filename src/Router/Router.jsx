@@ -19,6 +19,7 @@ import HrRouter from "../Auth/HrRouter";
 import AdminRouter from "../Auth/AdminRouter";
 import Contact from "../Pages/Contact/Contact";
 import Profile from "../Dashboard/Profile";
+import PrivateRoute from "../Auth/PrivateRoute";
 
 function Router() {
   const routersystem = createBrowserRouter([
@@ -46,7 +47,11 @@ function Router() {
     },
     {
       path: "/dashboard",
-      element: <Dashboard />,
+      element: (
+        <PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>
+      ),
       children: [
         {
           path: "profile",
