@@ -36,7 +36,18 @@ function EmployeeDetails() {
       return payment.data;
     },
   });
-  console.log(paymentData);
+
+  const yearMonthData = paymentData?.map((data) => {
+    const shortMonth = data.month.slice(0, 3);
+    const shortYear = data.year.toString().slice(-2);
+
+    // Combine them into the desired format
+    return {
+      ...data,
+      monthYear: `${shortMonth} ${shortYear}`,
+    };
+  });
+  console.log(yearMonthData);
 
   if (isLoading) {
     return <Loader />;
@@ -112,7 +123,7 @@ function EmployeeDetails() {
           <BarChart
             width={500}
             height={300}
-            data={paymentData}
+            data={yearMonthData}
             margin={{
               top: 5,
               right: 30,
@@ -121,7 +132,7 @@ function EmployeeDetails() {
             }}
           >
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="month" />
+            <XAxis dataKey="monthYear" />
             <YAxis />
             <Tooltip />
             <Legend />
@@ -130,7 +141,7 @@ function EmployeeDetails() {
               fill="#8884d8"
               activeBar={<Rectangle fill="pink" stroke="blue" />}
             >
-              <LabelList dataKey="salary" position="top" />
+              {/* <LabelList dataKey="salary" position="top" /> */}
             </Bar>
           </BarChart>
         </ResponsiveContainer>

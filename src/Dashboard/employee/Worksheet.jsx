@@ -56,7 +56,7 @@ function Worksheet() {
       <h2>Worksheet</h2>
       <div className="w-full">
         <form
-          className="flex flex-row items-center justify-between gap-5 w-full"
+          className="flex flex-col  md:flex-row items-center justify-between gap-5 w-full"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="form-control w-full">

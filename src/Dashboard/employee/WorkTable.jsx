@@ -307,7 +307,7 @@ function WorkTable() {
 
             <div className="w-full">
               <form
-                className="flex flex-row items-center justify-between gap-5 w-full"
+                className="flex  flex-col md:flex-row items-center justify-between gap-5 w-full"
                 onSubmit={handleSubmit(onSubmit)}
               >
                 <input type="hidden" {...register("_id")}></input>
