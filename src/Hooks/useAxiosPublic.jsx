@@ -1,7 +1,7 @@
 import axios from "axios";
 
 let axiosPublic = axios.create({
-  baseURL: "http://localhost:3000",
+  baseURL: "https://employe-management-server.vercel.app",
 });
 
 function useAxiosPublic() {

@@ -84,7 +84,9 @@ function Router() {
             </HrRouter>
           ),
           loader: ({ params }) =>
-            fetch(`http://localhost:3000/users/${params.email}`),
+            fetch(
+              `https://employe-management-server.vercel.app/users/${params.email}`
+            ),
         },
         {
           path: "progress",

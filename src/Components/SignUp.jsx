@@ -60,7 +60,7 @@ function Signup() {
             .then(() => {
               let verified = user.role === "HR" ? true : false;
               axiosPublic
-                .post("http://localhost:3000/users", {
+                .post("https://employe-management-server.vercel.app/users", {
                   name: user.name,
                   email: user.email,
                   role: user.role,
