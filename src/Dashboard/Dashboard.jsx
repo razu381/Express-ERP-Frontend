@@ -3,6 +3,7 @@ import { Link, Outlet } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import useAuthData from "../Hooks/useAuthData";
 import useCheckRole from "../Hooks/useCheckRole";
+import Footer from "../Components/shared/Footer";
 
 function Dashboard() {
   let { user, LogOut } = useAuthData();
@@ -98,6 +99,7 @@ function Dashboard() {
       </div>
       <div className="p-5">
         <Outlet />
+        <Footer />
       </div>
     </div>
   );
