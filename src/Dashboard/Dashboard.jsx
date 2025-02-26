@@ -66,7 +66,7 @@ function Dashboard() {
   return (
     <div>
       <ToastContainer />
-      <div className="p-5 bg-blue-200 flex justify-between items-center">
+      <div className="p-5  flex justify-between items-center">
         <ul className="flex  gap-5">{isRoleLoading ? "loading...." : li}</ul>
         <div>
           {user ? (
