@@ -14,6 +14,8 @@ function LogIn() {
   let location = useLocation().state?.from?.pathname;
   let navigate = useNavigate();
   let axiosPublic = useAxiosPublic();
+  let [email, setEmail] = useState();
+  let [pass, setPass] = useState();
 
   console.log(location);
 
@@ -21,6 +23,7 @@ function LogIn() {
     register,
     handleSubmit,
     watch,
+    reset,
     setError,
     formState: { errors },
   } = useForm({});
@@ -60,6 +63,26 @@ function LogIn() {
     }
   };
 
+  function hanldeFill(role) {
+    console.log("admin was clicked");
+    if (role === "admin") {
+      reset({
+        email: "sirazu382@gmail.com",
+        pass: "adminrazu52",
+      });
+    } else if (role === "hr") {
+      reset({
+        email: "sirazu52@gmail.com",
+        pass: "hrrazu52",
+      });
+    } else {
+      reset({
+        email: "symboilde123@gmail.com",
+        pass: "employeerazu52",
+      });
+    }
+  }
+
   return (
     <div>
       <Helmet>
@@ -67,10 +90,33 @@ function LogIn() {
       </Helmet>
       <div className="hero bg-california-950">
         <div className=" flex-col py-10 lg:flex-row-reverse">
-          <div className="card bg-white bg-opacity-5 w-full shrink-0 shadow-2xl">
-            <h2 className="text-center text-white text-2xl font-bold pt-5">
+          <div className="card bg-white bg-opacity-5 w-full  shrink-0 shadow-2xl">
+            <h2 className="text-center text-indigo-600 text-2xl font-bold pt-5">
               Sign In
             </h2>
+            <h2 className="text-center mt-5 mb-3">Fill Demo Login</h2>
+            <div className="inline-flex justify-center items-center mb-5 -space-x-px overflow-hidden rounded-md border bg-white shadow-xs mx-8">
+              <button
+                onClick={() => hanldeFill("admin")}
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-800 hover:text-white focus:relative"
+              >
+                Admin
+              </button>
+
+              <button
+                onClick={() => hanldeFill("hr")}
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-500 hover:bg-indigo-800 hover:text-white focus:relative"
+              >
+                HR
+              </button>
+
+              <button
+                onClick={() => hanldeFill("employee")}
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-400 hover:bg-indigo-800 hover:text-white focus:relative"
+              >
+                Employee
+              </button>
+            </div>
             <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
               <form className="card-body" onSubmit={handleSubmit(onSubmit)}>
                 <div className="form-control">
