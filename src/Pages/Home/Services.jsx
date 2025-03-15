@@ -1,11 +1,13 @@
 import React from "react";
+import Divider from "../../Components/shared/Divider";
 
 function Services() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl py-10 lg:py-20">
-        Our services
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20">
+        Other services
       </h2>
+      <Divider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* service 1 */}
         <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">

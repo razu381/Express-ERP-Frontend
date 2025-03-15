@@ -11,8 +11,8 @@ function Contact() {
   }
   return (
     <div>
-      <section className="relative flex flex-wrap lg:h-screen lg:items-center">
-        <div className="w-full px-4 py-12 sm:px-6 sm:py-16 lg:w-1/2 lg:px-8 lg:py-24">
+      <section className="grid grid-cols-1 md:grid-cols-2 my-10 justify-center items-center mx-[5%]">
+        <div className="">
           <div className="mx-auto max-w-lg text-center">
             <h1 className="text-2xl font-bold sm:text-3xl">
               Contact us today!
@@ -117,11 +117,11 @@ function Contact() {
           </form>
         </div>
 
-        <div className="relative h-64 w-full sm:h-96 lg:h-full lg:w-1/2">
+        <div className=" ">
           <img
             alt=""
             src="https://i.ibb.co.com/7tg00PBt/pexels-marcus-aurelius-4064230.jpg"
-            className="absolute inset-0 h-full w-full object-cover"
+            className="w-full max-h-[600px] object-cover rounded-xl mt-10"
           />
         </div>
       </section>

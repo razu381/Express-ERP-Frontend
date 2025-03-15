@@ -5,13 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import Divider from "../../Components/shared/Divider";
 
 function Testimonials() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl py-10 lg:py-14">
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-14">
         Testimonials
       </h2>
+      <Divider />
       <div>
         <Swiper
           // install Swiper modules
@@ -20,7 +22,7 @@ function Testimonials() {
           slidesPerView={3}
           navigation
           pagination={{ clickable: true }}
-          scrollbar={{ draggable: true }}
+          // scrollbar={{ draggable: true }}
           breakpoints={{
             320: {
               slidesPerView: 1,

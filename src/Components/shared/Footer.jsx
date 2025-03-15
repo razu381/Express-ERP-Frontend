@@ -22,7 +22,7 @@ function Footer() {
           <img
             src="https://i.ibb.co.com/PzGf5QgP/employeemanagement.png"
             alt=""
-            className="max-w-56"
+            className="max-w-44"
           />
         </div>
 

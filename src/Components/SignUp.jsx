@@ -217,7 +217,7 @@ function Signup() {
                   />
                 </div>
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary w-full hover:bg-blue-600">
+                  <button className="btn btn-primary w-full hover:bg-indigo-500">
                     Sign up
                   </button>
                 </div>

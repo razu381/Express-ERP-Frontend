@@ -22,7 +22,7 @@ function Stats() {
               Total Customers
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-indigo-500 md:text-5xl">
               1000000+
             </dd>
           </div>
@@ -32,7 +32,7 @@ function Stats() {
               Countries Served
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-indigo-500 md:text-5xl">
               53
             </dd>
           </div>
@@ -42,7 +42,7 @@ function Stats() {
               Continents Served
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-indigo-500 md:text-5xl">
               5
             </dd>
           </div>
@@ -52,7 +52,7 @@ function Stats() {
               Revenue
             </dt>
 
-            <dd className="text-4xl font-extrabold text-blue-600 md:text-5xl">
+            <dd className="text-4xl font-extrabold text-indigo-500 md:text-5xl">
               86M
             </dd>
           </div>

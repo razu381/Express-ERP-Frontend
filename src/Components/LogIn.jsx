@@ -105,7 +105,9 @@ function LogIn() {
                 </div>
 
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary w-full">Sign In</button>
+                  <button className="btn btn-primary w-full bg-indigo-500">
+                    Sign In
+                  </button>
                 </div>
                 <GoogleLogin title="Sign In" />
               </form>
