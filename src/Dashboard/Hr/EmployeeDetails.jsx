@@ -59,11 +59,9 @@ function EmployeeDetails() {
 
   return (
     <div>
-      <h2 className="font-bold text-center">Employee Details</h2>
-
-      <div className="stats shadow flex flex-col md:flex-row justify-center items-center">
+      <div className="stats shadow flex flex-col md:flex-row justify-center items-center my-10">
         <div className="stat">
-          <div className="stat-figure text-primary">
+          <div className="stat-figure text-xl text-indigo-700">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -79,11 +77,13 @@ function EmployeeDetails() {
             </svg>
           </div>
           <div className="stat-title">Name</div>
-          <div className="stat-value text-primary">{employeeData.name}</div>
+          <div className="stat-value text-xl text-indigo-700">
+            {employeeData.name}
+          </div>
         </div>
 
         <div className="stat">
-          <div className="stat-figure text-secondary">
+          <div className="stat-figure text-indigo-600">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -99,7 +99,7 @@ function EmployeeDetails() {
             </svg>
           </div>
           <div className="stat-title">Designation</div>
-          <div className="stat-value text-secondary">
+          <div className="stat-value text-xl text-indigo-600">
             {employeeData.designation}
           </div>
         </div>
@@ -112,13 +112,14 @@ function EmployeeDetails() {
               </div>
             </div>
           </div>
-          <div className="stat-title">Salary</div>
-          <div className="stat-value">{employeeData.salary}</div>
+          <div className="stat-title ">Salary</div>
+          <div className="stat-value text-xl text-indigo-500">
+            {employeeData.salary}
+          </div>
         </div>
       </div>
 
       <div>
-        <h2 className="text-center py-7">Chart here</h2>
         <ResponsiveContainer width="100%" height={300}>
           <BarChart
             width={500}
@@ -138,8 +139,8 @@ function EmployeeDetails() {
             <Legend />
             <Bar
               dataKey="salary"
-              fill="#8884d8"
-              activeBar={<Rectangle fill="pink" stroke="blue" />}
+              fill="#615fff"
+              activeBar={<Rectangle fill="#7c86ff" stroke="blue" />}
             >
               {/* <LabelList dataKey="salary" position="top" /> */}
             </Bar>

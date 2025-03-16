@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import Modal from "react-modal";
 import Payment from "./Payment";
 import Loader from "../../Components/shared/Loader";
+import Divider from "../../Components/shared/Divider";
 
 function Payroll() {
   let axiosSecure = useAxiosSecure();
@@ -113,7 +114,7 @@ function Payroll() {
         return (
           <button
             disabled={isPaid}
-            className="btn bg-purple-600 text-white"
+            className="btn bg-indigo-500 text-white"
             onClick={() => handleAdminPay(info.row.original)}
           >
             Pay
@@ -145,13 +146,18 @@ function Payroll() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">Payroll</h2>
+    <div className="flex flex-col items-center justify-center mx-[3%] py-5">
+      <div className="w-full">
+        <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-10 ">
+          Payment History
+        </h2>
+        <Divider />
+      </div>
       <div className="overflow-x-auto w-full">
-        <table className="table table-zebra w-full">
+        <table className="table w-full my-5">
           <thead className=" text-white">
             {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+              <tr key={headerGroup.id} className="border-b-1 border-indigo-200">
                 {headerGroup.headers.map((header) => {
                   return (
                     <th key={header.id} className="py-3 px-5 text-black">
@@ -169,7 +175,7 @@ function Payroll() {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
+              <tr key={row.id} className="border-b-1 border-indigo-200">
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className="py-3 px-5">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import WorkTable from "./WorkTable";
 import { useQueryClient } from "@tanstack/react-query";
 import useAuthData from "../../Hooks/useAuthData";
+import Divider from "../../Components/shared/Divider";
 
 function Worksheet() {
   let queryClient = useQueryClient();
@@ -52,15 +53,23 @@ function Worksheet() {
     }
   };
   return (
-    <div>
-      <h2>Worksheet</h2>
+    <div className="py-5">
+      <div>
+        <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-10 ">
+          Worksheet
+        </h2>
+        <Divider />
+      </div>
       <div className="w-full">
         <form
           className="flex flex-col  md:flex-row items-center justify-between gap-5 w-full"
           onSubmit={handleSubmit(onSubmit)}
         >
           <div className="form-control w-full">
-            <select {...register("Tasks")} className="select select-bordered">
+            <select
+              {...register("Tasks")}
+              className="select select-bordered w-full"
+            >
               <option value="sales">Sales</option>
               <option value="support">Support</option>
               <option value="content">Content</option>
@@ -71,7 +80,7 @@ function Worksheet() {
             <input
               type="number"
               placeholder="Hours Worked"
-              className="input input-bordered"
+              className="input input-bordered w-full"
               {...register("hours", { required: true })}
             />
           </div>
@@ -83,7 +92,7 @@ function Worksheet() {
             />
           </div>
           <div className="form-control w-full">
-            <button className="btn bg-green-800 text-white w-full">
+            <button className="btn bg-indigo-500 text-white w-full">
               Submit
             </button>
           </div>

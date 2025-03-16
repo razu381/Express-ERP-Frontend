@@ -132,7 +132,7 @@ function AllEmployeeList() {
           <h2 className="font-bold">HR</h2>
         ) : (
           <button
-            className="btn bg-purple-600 text-white"
+            className="btn bg-indigo-600 text-white text-xs lg:text-sm"
             onClick={() => handleFireHR(info.row.original?._id, "HR")}
           >
             Make HR
@@ -163,7 +163,7 @@ function AllEmployeeList() {
       id: "incSal",
       cell: (info) => (
         <button
-          className="btn bg-purple-600 text-white"
+          className="btn bg-indigo-700 text-white text-xs lg:text-sm"
           onClick={() =>
             handleSalaryIncrement(
               info.row.original?._id,
@@ -201,13 +201,13 @@ function AllEmployeeList() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mx-[3%]">
-      <div className="flex justify-between items-center gap-5">
+    <div className="flex flex-col items-center justify-center mx-[3%] py-10">
+      <div className="flex items-center justify-between w-full">
         <h2 className="text-center py-5 text-xl md:text-3xl font-bold">
           All Employee List
         </h2>
         <button
-          className="btn btn-primary"
+          className="btn btn-primary shadow-none bg-indigo-500 text-white border-none"
           onClick={() => setTableView(!isTableView)}
         >
           {isTableView ? "Card View" : "Table View"}
@@ -217,10 +217,13 @@ function AllEmployeeList() {
       {isTableView ? (
         <div className="overflow-x-auto w-full">
           {workListHR.length > 0 ? (
-            <table className="table table-zebra w-full">
+            <table className="table w-full my-10">
               <thead className=" text-white">
                 {table.getHeaderGroups().map((headerGroup) => (
-                  <tr key={headerGroup.id}>
+                  <tr
+                    key={headerGroup.id}
+                    className="border-b-1 border-indigo-200"
+                  >
                     {headerGroup.headers.map((header) => {
                       return (
                         <th key={header.id} className="py-3 px-5 text-black">
@@ -238,7 +241,7 @@ function AllEmployeeList() {
               </thead>
               <tbody>
                 {table.getRowModel().rows.map((row) => (
-                  <tr key={row.id}>
+                  <tr key={row.id} className="border-b-1 border-indigo-200">
                     {row.getVisibleCells().map((cell) => (
                       <td key={cell.id} className="py-3 px-5">
                         {flexRender(
@@ -320,7 +323,7 @@ function AllEmployeeList() {
                   <h2 className="font-bold">Role: HR</h2>
                 ) : (
                   <button
-                    className="w-fullpx-3 py-2 bg-purple-600  text-white"
+                    className="w-fullpx-3 py-2 bg-indigo-500  text-white"
                     onClick={() => handleFireHR(employee._id, "HR")}
                   >
                     Make HR
@@ -330,7 +333,7 @@ function AllEmployeeList() {
                   <h2 className="font-bold text-red-600">Fired</h2>
                 ) : (
                   <button
-                    className="w-fullpx-3 py-2 bg-purple-600  text-white"
+                    className="w-fullpx-3 py-2 bg-indigo-500  text-white"
                     onClick={() => handleFireHR(employee._id, "fired")}
                   >
                     Fire
@@ -338,7 +341,7 @@ function AllEmployeeList() {
                 )}
 
                 <button
-                  className="btn bg-purple-600 text-white"
+                  className="btn bg-indigo-500 text-white"
                   onClick={() =>
                     handleSalaryIncrement(employee?._id, employee?.salary)
                   }

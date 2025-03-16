@@ -17,6 +17,7 @@ import useAxiosSecure from "../../Hooks/useAxiosSecure";
 import { FaRegTimesCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import Loader from "../../Components/shared/Loader";
+import Divider from "../../Components/shared/Divider";
 
 function EmployeeList() {
   let axiosSecure = useAxiosSecure();
@@ -139,7 +140,7 @@ function EmployeeList() {
         return (
           <button
             disabled={!isVerified}
-            className="btn bg-violet-700 text-white"
+            className="btn bg-indigo-500 text-white"
             onClick={() => {
               setIsOpen(true);
               setCurrColumnData(info.row.original);
@@ -149,13 +150,13 @@ function EmployeeList() {
           </button>
         );
       },
-      header: () => <span className="flex items-center gap-2">Edit</span>,
+      header: () => <span className="flex items-center gap-2">Pay</span>,
     }),
     columnHelper.display({
       id: "details",
       cell: (info) => (
         <Link
-          className="btn"
+          className="btn bg-indigo-600 text-white"
           to={`/dashboard/details/${info.row.original?.email}`}
         >
           Details
@@ -184,12 +185,17 @@ function EmployeeList() {
 
   return (
     <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">Tanstack Table</h2>
+      <div className="w-full">
+        <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-10">
+          List of employees
+        </h2>
+        <Divider />
+      </div>
       <div className="overflow-x-auto w-full">
-        <table className="table table-zebra w-full">
+        <table className="table  w-full">
           <thead className=" text-white">
             {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+              <tr key={headerGroup.id} className="border-b-1 border-indigo-200">
                 {headerGroup.headers.map((header) => {
                   return (
                     <th key={header.id} className="py-3 px-5 text-black">
@@ -207,7 +213,7 @@ function EmployeeList() {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
+              <tr key={row.id} className="border-b-1 border-indigo-200">
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className="py-3 px-5">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
@@ -355,7 +361,7 @@ function EmployeeList() {
               <input
                 type="submit"
                 value="Pay"
-                className="btn  bg-green-700  text-white w-full"
+                className="btn  bg-indigo-500  text-white w-full"
               />
             </form>
           </h2>

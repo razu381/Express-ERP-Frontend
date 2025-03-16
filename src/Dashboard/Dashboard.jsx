@@ -67,40 +67,44 @@ function Dashboard() {
   return (
     <div>
       <ToastContainer />
-      <div className="p-5  flex justify-between items-center">
-        <ul className="flex  gap-5">{isRoleLoading ? "loading...." : li}</ul>
-        <div>
-          {user ? (
-            <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
-              <img
-                onClick={() => setDisplayLogOut(!displayLogOut)}
-                src={user?.photoURL}
-                alt="user"
-                className="w-10 h-10 rounded-full"
-              />
-              {displayLogOut && (
-                <Link
-                  onClick={handleLogOut}
-                  className="btn bg-california-500 hover:bg-california-800"
-                >
-                  LogOut
-                </Link>
-              )}
-            </div>
-          ) : (
-            <Link
-              to="/login"
-              className="btn bg-california-500 hover:bg-california-800"
-            >
-              Login
-            </Link>
-          )}
+      <div className=" bg-gray-100 px-[3%]">
+        <div className="p-5  flex justify-between items-center max-w-full px-5 lg:max-w-[1140px] mx-auto">
+          <ul className="flex  gap-5 font-medium text-sm">
+            {isRoleLoading ? "loading...." : li}
+          </ul>
+          <div>
+            {user ? (
+              <div className="flex flex-col md:flex-row gap-2 justify-center items-center">
+                <img
+                  onClick={() => setDisplayLogOut(!displayLogOut)}
+                  src={user?.photoURL}
+                  alt="user"
+                  className="w-10 h-10 rounded-full"
+                />
+                {displayLogOut && (
+                  <Link
+                    onClick={handleLogOut}
+                    className="btn bg-california-500 hover:bg-california-800"
+                  >
+                    LogOut
+                  </Link>
+                )}
+              </div>
+            ) : (
+              <Link
+                to="/login"
+                className="btn bg-california-500 hover:bg-california-800"
+              >
+                Login
+              </Link>
+            )}
+          </div>
         </div>
       </div>
-      <div className="p-5">
+      <div className="max-w-full px-5 lg:max-w-[1140px] mx-auto">
         <Outlet />
-        <Footer />
       </div>
+      <Footer />
     </div>
   );
 }

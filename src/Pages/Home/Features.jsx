@@ -12,9 +12,9 @@ function Features() {
         {/* service 1 */}
         <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
-            {/* <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Web
-            </strong> */}
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              Employee
+            </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
               Self-Service Worksheet Management
@@ -34,9 +34,9 @@ function Features() {
         {/* //service 2 */}
         <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
-            {/* <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Web
-            </strong> */}
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              HR
+            </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
               Comprehensive Employee Oversight
@@ -56,9 +56,9 @@ function Features() {
         {/* //service 3 */}
         <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
-            {/* <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
-              Graphic
-            </strong> */}
+            <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
+              Admin
+            </strong>
 
             <h3 className="mt-4 text-lg font-medium sm:text-xl">
               Centralized Administrative Control

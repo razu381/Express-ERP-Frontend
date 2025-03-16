@@ -48,7 +48,7 @@ function AboutUs() {
         <img
           alt=""
           src="https://i.ibb.co.com/zHQDqJYv/laptop-7136991-640.jpg"
-          className="w-full object-cover max-h-[600px] rounded-sm"
+          className="p-8 w-full object-cover max-h-[500px] md:max-h-[600px] rounded-sm"
         />
       </section>
     </div>

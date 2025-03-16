@@ -26,6 +26,7 @@ function WorkProgress() {
   let {
     isLoading,
     isError,
+    isFetching,
     refetch,
     data: workListHR = [],
   } = useQuery({
@@ -149,15 +150,17 @@ function WorkProgress() {
 
   return (
     <div className="flex flex-col items-center justify-center mx-[3%]">
-      <div className="w-full flex justify-between items-center gap-2">
-        <h2 className=" py-5  text-3xl font-bold">Work Progress</h2>
-        <div className="w-full md:w-fit ">
+      <div className="w-full flex justify-between items-center gap-2 py-5 lg:py-10">
+        <h2 className=" py-5  flex-1 text-sm md:text-3xl font-bold">
+          Work Progress
+        </h2>
+        <div className="w-full md:w-fit flex-1 justify-items-end">
           <form className="w-full  max-w-xs">
             <select
               value={dateQuery}
               onChange={handleDateFilter}
               name="dateFilter1"
-              className="select select-bordered w-full max-w-xs h-4 md:h-12"
+              className="select select-bordered w-full  max-w-xs h-6 md:h-12"
             >
               <option>latest</option>
               <option>oldest</option>
@@ -165,91 +168,100 @@ function WorkProgress() {
           </form>
         </div>
       </div>
-
-      <div className="overflow-x-auto w-full">
-        <table className="table table-zebra w-full">
-          <thead className=" text-white">
-            {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
-                {headerGroup.headers.map((header) => {
-                  return (
-                    <th key={header.id} className="py-3 px-5 text-black">
-                      <div className=" mb-2">
-                        {flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
+      {isFetching ? (
+        <Loader />
+      ) : (
+        <div className="overflow-x-auto w-full mb-5">
+          <table className="table w-full mb-5">
+            <thead className=" text-white">
+              {table.getHeaderGroups().map((headerGroup) => (
+                <tr
+                  key={headerGroup.id}
+                  className="border-b-1 border-indigo-200"
+                >
+                  {headerGroup.headers.map((header) => {
+                    return (
+                      <th key={header.id} className="py-3 px-5 text-black">
+                        <div className=" mb-2">
+                          {flexRender(
+                            header.column.columnDef.header,
+                            header.getContext()
+                          )}
+                        </div>
+                        {header.column.getCanFilter() && (
+                          <Filter column={header.column} />
                         )}
-                      </div>
-                      {header.column.getCanFilter() && (
-                        <Filter column={header.column} />
-                      )}
-                    </th>
-                  );
-                })}
-              </tr>
-            ))}
-          </thead>
-          <tbody>
-            {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
-                {row.getVisibleCells().map((cell) => (
-                  <td key={cell.id} className="py-3 px-5">
-                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
-                  </td>
-                ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <div className="flex justify-between">
-          <div className="pagination-controls flex gap-3">
-            <button
-              onClick={() => table.firstPage()}
-              disabled={!table.getCanPreviousPage()}
-            >
-              {"<<"}
-            </button>
-            <button
-              onClick={() => table.previousPage()}
-              disabled={!table.getCanPreviousPage()}
-              className="text-blue-600 font-bold"
-            >
-              {"<"}
-            </button>
-            <span>
-              Page {table.getState().pagination.pageIndex + 1} of{" "}
-              {table.getPageCount()}
-            </span>
-            <button
-              onClick={() => table.nextPage()}
-              disabled={!table.getCanNextPage()}
-              className="text-blue-600 font-bold"
-            >
-              {">"}
-            </button>
-            <button
-              onClick={() => table.lastPage()}
-              disabled={!table.getCanNextPage()}
-            >
-              {">>"}
-            </button>
-          </div>
-
-          {/* Step 5: Page Size Selector */}
-          <div>
-            <select
-              value={table.getState().pagination.pageSize}
-              onChange={(e) => table.setPageSize(Number(e.target.value))}
-            >
-              {[5, 10, 20, 30, 40, 50].map((pageSize) => (
-                <option key={pageSize} value={pageSize}>
-                  Show {pageSize}
-                </option>
+                      </th>
+                    );
+                  })}
+                </tr>
               ))}
-            </select>
+            </thead>
+            <tbody>
+              {table.getRowModel().rows.map((row) => (
+                <tr key={row.id} className="border-b-1 border-indigo-200">
+                  {row.getVisibleCells().map((cell) => (
+                    <td key={cell.id} className="py-3 px-5">
+                      {flexRender(
+                        cell.column.columnDef.cell,
+                        cell.getContext()
+                      )}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div className="flex justify-between">
+            <div className="pagination-controls flex gap-3">
+              <button
+                onClick={() => table.firstPage()}
+                disabled={!table.getCanPreviousPage()}
+              >
+                {"<<"}
+              </button>
+              <button
+                onClick={() => table.previousPage()}
+                disabled={!table.getCanPreviousPage()}
+                className="text-blue-600 font-bold"
+              >
+                {"<"}
+              </button>
+              <span>
+                Page {table.getState().pagination.pageIndex + 1} of{" "}
+                {table.getPageCount()}
+              </span>
+              <button
+                onClick={() => table.nextPage()}
+                disabled={!table.getCanNextPage()}
+                className="text-blue-600 font-bold"
+              >
+                {">"}
+              </button>
+              <button
+                onClick={() => table.lastPage()}
+                disabled={!table.getCanNextPage()}
+              >
+                {">>"}
+              </button>
+            </div>
+
+            {/* Step 5: Page Size Selector */}
+            <div>
+              <select
+                value={table.getState().pagination.pageSize}
+                onChange={(e) => table.setPageSize(Number(e.target.value))}
+              >
+                {[5, 10, 20, 30, 40, 50].map((pageSize) => (
+                  <option key={pageSize} value={pageSize}>
+                    Show {pageSize}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

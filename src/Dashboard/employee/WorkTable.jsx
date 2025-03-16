@@ -21,6 +21,7 @@ import { toast } from "react-toastify";
 import { FaEdit } from "react-icons/fa";
 import useAuthData from "../../Hooks/useAuthData";
 import Loader from "../../Components/shared/Loader";
+import Divider from "../../Components/shared/Divider";
 
 function WorkTable() {
   let axiosSecure = useAxiosSecure();
@@ -204,8 +205,7 @@ function WorkTable() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">Work log</h2>
+    <div className="flex flex-col items-center justify-center mx-[3%] py-10">
       <div className="overflow-x-auto w-full">
         <table className="table table-zebra w-full">
           <thead className=" text-white">
@@ -344,7 +344,7 @@ function WorkTable() {
                   />
                 </div>
                 <div className="form-control w-full">
-                  <button className="btn bg-green-800 text-white w-full">
+                  <button className="btn bg-indigo-500 text-white w-full">
                     Update
                   </button>
                 </div>

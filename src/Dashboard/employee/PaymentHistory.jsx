@@ -11,6 +11,7 @@ import {
 import { toast } from "react-toastify";
 import Loader from "../../Components/shared/Loader";
 import useAuthData from "../../Hooks/useAuthData";
+import Divider from "../../Components/shared/Divider";
 
 function PaymentHistory() {
   let axiosSecure = useAxiosSecure();
@@ -83,8 +84,13 @@ function PaymentHistory() {
 
   return (
     <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">Payment History</h2>
-      <div className="overflow-x-auto w-full">
+      <div className="w-full">
+        <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-10 ">
+          Payment History
+        </h2>
+        <Divider />
+      </div>
+      <div className="overflow-x-auto w-full pb-10 ">
         <table className="table table-zebra w-full">
           <thead className=" text-white">
             {table.getHeaderGroups().map((headerGroup) => (
