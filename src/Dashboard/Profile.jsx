@@ -1,27 +1,35 @@
 import React from "react";
 import useAuthData from "../Hooks/useAuthData";
 import useCheckRole from "../Hooks/useCheckRole";
+import Loader from "../Components/shared/Loader";
 
 function Profile() {
-  let { user } = useAuthData();
+  let { user, loading } = useAuthData();
   let { userRole, isRoleLoading } = useCheckRole();
 
   console.log(user);
 
-  return (
-    <div className="flex flex-col justify-center items-center">
-      <div className="relative block overflow-hidden rounded-sm border border-gray-100 p-4 sm:p-6 lg:p-8 max-w-md">
-        <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
+  if (loading || isRoleLoading) {
+    return <Loader />;
+  }
 
-        <div className="sm:flex sm:justify-between sm:gap-4">
+  return (
+    <div className="flex flex-col justify-center items-center  my-10">
+      <div className="bg-gray-100 relative block overflow-hidden rounded-sm border border-gray-100 p-8 md:p-10 lg:pb-20 lg:px-10 max-w-md">
+        <h3 className="font-bold text-xl lg:text-2xl text-center py-10 text-indigo-500">
+          Welcome to our Dashboard
+        </h3>
+        <div className="flex justify-between gap-4">
           <div>
             <h3 className="text-lg font-bold text-gray-900 sm:text-xl">
               Hellllo, {user?.displayName}
             </h3>
-            <p className="py-2">Role: {userRole?.role}</p>
+            <p className=" bg-indigo-900 text-white w-fit px-5 py-1 my-2 rounded-sm">
+              {userRole?.role}
+            </p>
           </div>
 
-          <div className="hidden sm:block sm:shrink-0">
+          <div className=" ">
             <img
               alt=""
               src={user?.photoURL}
@@ -32,46 +40,28 @@ function Profile() {
         </div>
 
         <div className="mt-4">
-          <h3 className="font-bold text-xl lg:text-2xl">
-            Welcome to our Dashboard. Features
-          </h3>
-          <ul className="text-sm text-pretty text-gray-500">
-            <li>
-              1. If employee:
-              <ul>
-                <li> - You can view, add, edit, delete your worksheet</li>
-                <li> - You can see your payment history</li>
-              </ul>
-            </li>
-            <li>
-              1. If employee:
-              <ul>
-                <li> - You can view, add, edit, delete your worksheet</li>
-                <li> - You can see your payment history</li>
-              </ul>
-            </li>
-            <li>
-              1. If HR:
-              <ul>
-                <li>
-                  {" "}
-                  - You can mointor all works done by employee and filter
-                </li>
-                <li>
-                  {" "}
-                  - You can see all employees and request for payment to admin
-                </li>
-                <li> - You can see employee details</li>
-              </ul>
-            </li>
-            <li>
-              1. If Admin:
-              <ul>
-                <li> - You can see all employees and make them HR/Fire</li>
-                <li> - You can pay all employess and increase their salary</li>
-              </ul>
-            </li>
-          </ul>
+          <h3 className="font-bold">Capabitlities: </h3>
+          {userRole?.role === "Admin" && (
+            <ul>
+              <li> - You can see all employees and make them HR/Fire</li>
+              <li> - You can pay all employess and increase their salary</li>
+            </ul>
+          )}
+          {userRole?.role === "Hr" && (
+            <ul>
+              <li>- You can mointor all works done by employee and filter</li>
+              <li>
+                - You can see all employees and request for payment to admin
+              </li>
+              <li> - You can see employee details</li>
+            </ul>
+          )}
+          {userRole?.role === "Employee" && (
+            <ul>
+              <li> - You can view, add, edit, delete your worksheet</li>
+              <li> - You can see your payment history</li>
+            </ul>
+          )}
         </div>
       </div>
     </div>

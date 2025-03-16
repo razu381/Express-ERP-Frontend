@@ -13,7 +13,7 @@ function Newsletter() {
     });
   }
   return (
-    <section className="bg-gray-100 my-10 rounded-sm">
+    <section className="bg-gray-100 my-10 lg:my-20 rounded-sm">
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-2xl font-bold text-california-900 md:text-3xl">

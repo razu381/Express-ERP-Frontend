@@ -4,11 +4,11 @@ import Divider from "../../Components/shared/Divider";
 function FAQ() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-10">
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl">
         FAQ
       </h2>
       <Divider />
-      <div className="space-y-4 mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <div className="space-y-4 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <details
           className="group [&_summary::-webkit-details-marker]:hidden"
           open

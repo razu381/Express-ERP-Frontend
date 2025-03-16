@@ -10,7 +10,7 @@ import Divider from "../../Components/shared/Divider";
 function Testimonials() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-14">
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20">
         Testimonials
       </h2>
       <Divider />

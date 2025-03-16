@@ -11,8 +11,8 @@ function AboutUs() {
       <Divider />
 
       <section className="overflow-hidden  sm:grid sm:grid-cols-1 lg:grid-cols-2 sm:items-center sm:justify-center">
-        <div className="p-8 md:p-12 lg:pl-0 lg:pr-20 lg:py-24">
-          <div className="mx-auto max-w-xl ">
+        <div className=" lg:pl-0 lg:pr-20 ">
+          <div className="lg:mx-auto lg:max-w-xl ">
             <h2 className="text-2xl font-bold text-gray-900 md:text-3xl">
               Streamlining Workforce Management, Empowering Your Team.
             </h2>
@@ -48,7 +48,7 @@ function AboutUs() {
         <img
           alt=""
           src="https://i.ibb.co.com/zHQDqJYv/laptop-7136991-640.jpg"
-          className="p-8 w-full object-cover max-h-[500px] md:max-h-[600px] rounded-sm"
+          className="mt-5 w-full object-cover max-h-[500px] md:max-h-[600px] rounded-sm"
         />
       </section>
     </div>

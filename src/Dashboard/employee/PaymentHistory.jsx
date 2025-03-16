@@ -91,10 +91,10 @@ function PaymentHistory() {
         <Divider />
       </div>
       <div className="overflow-x-auto w-full pb-10 ">
-        <table className="table table-zebra w-full">
+        <table className="table  w-full my-5">
           <thead className=" text-white">
             {table.getHeaderGroups().map((headerGroup) => (
-              <tr key={headerGroup.id}>
+              <tr key={headerGroup.id} className="border-b-1 border-indigo-200">
                 {headerGroup.headers.map((header) => {
                   return (
                     <th key={header.id} className="py-3 px-5 text-black">
@@ -112,7 +112,7 @@ function PaymentHistory() {
           </thead>
           <tbody>
             {table.getRowModel().rows.map((row) => (
-              <tr key={row.id}>
+              <tr key={row.id} className="border-b-1 border-indigo-200">
                 {row.getVisibleCells().map((cell) => (
                   <td key={cell.id} className="py-3 px-5">
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

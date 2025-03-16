@@ -3,7 +3,7 @@ import React from "react";
 function Stats() {
   return (
     <div>
-      <div className="mx-auto max-w-screen-xl mt-7 px-4 py-8 sm:px-6 sm:py-12 lg:px-8">
+      <div className="mx-auto max-w-screen-xl mt-7 px-4 py-8 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
             Trusted by Customers Around The World
@@ -16,7 +16,7 @@ function Stats() {
           </p>
         </div>
 
-        <dl className="mg-6 grid grid-cols-1 gap-4 divide-y divide-gray-100 sm:mt-8 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+        <dl className="mg-6 grid grid-cols-2 gap-4 divide-y divide-gray-100 sm:mt-8 sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
           <div className="flex flex-col px-4 py-8 text-center">
             <dt className="order-last text-lg font-medium text-gray-500">
               Total Customers
