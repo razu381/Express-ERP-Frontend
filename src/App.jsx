@@ -12,7 +12,7 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
-        <Router></Router>;
+        <Router></Router>
       </AuthProvider>
     </QueryClientProvider>
   );

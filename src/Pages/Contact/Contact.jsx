@@ -38,7 +38,7 @@ function Contact() {
                 <input
                   type="text"
                   name="name"
-                  className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 text-sm shadow-xs"
                   placeholder="Your name"
                 />
 
@@ -68,7 +68,7 @@ function Contact() {
               <div className="relative">
                 <input
                   type="email"
-                  className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 text-sm shadow-xs"
                   placeholder="Enter email"
                 />
 
@@ -96,10 +96,10 @@ function Contact() {
                 Message
               </label>
 
-              <div className="overflow-hidden rounded-lg border border-gray-200 shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
+              <div className="overflow-hidden rounded-sm border border-gray-200 shadow-xs focus-within:border-blue-600 focus-within:ring-1 focus-within:ring-blue-600">
                 <textarea
                   id="message"
-                  className="w-full rounded-lg border-gray-200 p-4 pe-12 text-sm shadow-xs"
+                  className="w-full rounded-sm border-gray-200 p-4 pe-12 text-sm shadow-xs"
                   rows="4"
                   placeholder="Your message"
                 ></textarea>
@@ -109,7 +109,7 @@ function Contact() {
             <div className="flex items-center justify-between">
               <button
                 type="submit"
-                className="w-full rounded-lg bg-violet-500 px-5 py-3 text-sm font-medium text-white"
+                className="w-full rounded-sm bg-violet-500 px-5 py-3 text-sm font-medium text-white"
               >
                 Send message
               </button>
@@ -121,7 +121,7 @@ function Contact() {
           <img
             alt=""
             src="https://i.ibb.co.com/7tg00PBt/pexels-marcus-aurelius-4064230.jpg"
-            className="w-full max-h-[600px] object-cover rounded-xl mt-10"
+            className="w-full max-h-[600px] object-cover rounded-sm mt-10"
           />
         </div>
       </section>

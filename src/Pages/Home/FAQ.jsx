@@ -13,7 +13,7 @@ function FAQ() {
           className="group [&_summary::-webkit-details-marker]:hidden"
           open
         >
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-sm bg-gray-50 p-4 text-gray-900">
             <h2 className="font-medium">
               1. What services does Express ERP offer?
             </h2>
@@ -43,7 +43,7 @@ function FAQ() {
         </details>
 
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-sm bg-gray-50 p-4 text-gray-900">
             <h2 className="font-medium">
               2. How can Express ERP improve my website’s SEO?
             </h2>
@@ -72,7 +72,7 @@ function FAQ() {
           </p>
         </details>
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-sm bg-gray-50 p-4 text-gray-900">
             <h2 className="font-medium">
               3. Can you design a custom website for my business?
             </h2>
@@ -101,7 +101,7 @@ function FAQ() {
           </p>
         </details>
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-sm bg-gray-50 p-4 text-gray-900">
             <h2 className="font-medium">
               4. What makes your graphic design services unique?
             </h2>
@@ -130,7 +130,7 @@ function FAQ() {
           </p>
         </details>
         <details className="group [&_summary::-webkit-details-marker]:hidden">
-          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-lg bg-gray-50 p-4 text-gray-900">
+          <summary className="flex cursor-pointer items-center justify-between gap-1.5 rounded-sm bg-gray-50 p-4 text-gray-900">
             <h2 className="font-medium">
               5. How can I get started with Express ERP?
             </h2>

@@ -79,7 +79,7 @@ function Header() {
               {displayLogOut && (
                 <Link
                   onClick={handleLogOut}
-                  className="btn bg-indigo-500 hover:bg-indigo-800 text-white"
+                  className="btn bg-indigo-500 hover:bg-indigo-700 text-white"
                 >
                   LogOut
                 </Link>
@@ -88,7 +88,7 @@ function Header() {
           ) : (
             <Link
               to="/login"
-              className="btn bg-indigo-500 hover:bg-indigo-800 text-white"
+              className="btn bg-indigo-500 hover:bg-indigo-700 text-white"
             >
               Login
             </Link>

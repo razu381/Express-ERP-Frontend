@@ -94,25 +94,25 @@ function LogIn() {
             <h2 className="text-center text-indigo-600 text-2xl font-bold pt-5">
               Sign In
             </h2>
-            <h2 className="text-center mt-5 mb-3">Fill Demo Login</h2>
-            <div className="inline-flex justify-center items-center mb-5 -space-x-px overflow-hidden rounded-md border bg-white shadow-xs mx-8">
+            <h2 className="text-center mt-5 mb-3"> Demo Login Credentials</h2>
+            <div className="inline-flex justify-center items-center mb-5 -space-x-px overflow-hidden rounded-sm border-none bg-white shadow-xs mx-8">
               <button
                 onClick={() => hanldeFill("admin")}
-                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-800 hover:text-white focus:relative"
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 hover:text-white focus:relative"
               >
                 Admin
               </button>
 
               <button
                 onClick={() => hanldeFill("hr")}
-                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-500 hover:bg-indigo-800 hover:text-white focus:relative"
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white  bg-indigo-500 hover:bg-indigo-700 hover:text-white focus:relative"
               >
                 HR
               </button>
 
               <button
                 onClick={() => hanldeFill("employee")}
-                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-400 hover:bg-indigo-800 hover:text-white focus:relative"
+                className="w-full inline-block px-4 py-2 text-sm font-medium text-white bg-indigo-400 hover:bg-indigo-700 hover:text-white focus:relative"
               >
                 Employee
               </button>
@@ -151,7 +151,7 @@ function LogIn() {
                 </div>
 
                 <div className="form-control mt-6">
-                  <button className="btn btn-primary w-full bg-indigo-500">
+                  <button className="btn btn-primary w-full bg-indigo-500 hover:bg-indigo-700 border-none">
                     Sign In
                   </button>
                 </div>

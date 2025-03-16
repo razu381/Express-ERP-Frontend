@@ -306,7 +306,7 @@ function AllEmployeeList() {
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {workListHR.map((employee) => (
-            <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+            <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
               <div className="flex flex-col gap-2">
                 <h3>
                   <span className="mt-4 font-bold">Name</span>: {employee?.name}

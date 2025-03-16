@@ -39,7 +39,7 @@ function Testimonials() {
           }}
         >
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex  gap-4 items-center">
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -99,7 +99,7 @@ function Testimonials() {
             </blockquote>
           </SwiperSlide>
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex  gap-4 items-center">
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -159,7 +159,7 @@ function Testimonials() {
             </blockquote>
           </SwiperSlide>
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex  gap-4 items-center">
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -219,7 +219,7 @@ function Testimonials() {
             </blockquote>
           </SwiperSlide>
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex  gap-4 items-center">
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -278,7 +278,7 @@ function Testimonials() {
             </blockquote>
           </SwiperSlide>
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 <div className="flex  gap-4 items-center">
                   <p className="mt-0.5 text-lg font-medium text-gray-900">
@@ -338,7 +338,7 @@ function Testimonials() {
             </blockquote>
           </SwiperSlide>
           <SwiperSlide>
-            <blockquote className="rounded-lg bg-gray-50 p-6 shadow-xs sm:p-8">
+            <blockquote className="rounded-sm bg-gray-50 p-6 shadow-xs sm:p-8">
               <div className="flex items-center gap-4">
                 {/* <img
                   alt=""

@@ -1,5 +1,6 @@
 import React from "react";
 import Divider from "../../Components/shared/Divider";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -34,12 +35,12 @@ function AboutUs() {
             </p>
 
             <div className="mt-4 md:mt-8">
-              <a
-                href="#"
-                className="inline-block rounded-sm bg-emerald-600 px-12 py-3 text-sm font-medium text-white transition hover:bg-emerald-700 focus:ring-3 focus:ring-yellow-400 focus:outline-hidden"
+              <Link
+                to="/contact"
+                className="inline-block rounded-sm bg-indigo-500 px-12 py-3 text-sm font-medium text-white transition hover:bg-indigo-700"
               >
-                Get Started Today
-              </a>
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
@@ -47,7 +48,7 @@ function AboutUs() {
         <img
           alt=""
           src="https://i.ibb.co.com/zHQDqJYv/laptop-7136991-640.jpg"
-          className="w-full object-cover max-h-[600px]"
+          className="w-full object-cover max-h-[600px] rounded-sm"
         />
       </section>
     </div>

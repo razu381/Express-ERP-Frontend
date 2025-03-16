@@ -10,7 +10,7 @@ function Profile() {
 
   return (
     <div className="flex flex-col justify-center items-center">
-      <div className="relative block overflow-hidden rounded-lg border border-gray-100 p-4 sm:p-6 lg:p-8 max-w-md">
+      <div className="relative block overflow-hidden rounded-sm border border-gray-100 p-4 sm:p-6 lg:p-8 max-w-md">
         <span className="absolute inset-x-0 bottom-0 h-2 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
 
         <div className="sm:flex sm:justify-between sm:gap-4">
@@ -26,7 +26,7 @@ function Profile() {
               alt=""
               src={user?.photoURL}
               referrerPolicy="no-referrer"
-              className="size-16 rounded-lg object-cover shadow-xs"
+              className="size-16 rounded-sm object-cover shadow-xs"
             />
           </div>
         </div>

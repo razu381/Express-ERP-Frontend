@@ -17,6 +17,7 @@ import Loader from "../../Components/shared/Loader";
 function WorkProgress() {
   let axiosSecure = useAxiosSecure();
   const [columnFilters, setColumnFilters] = useState([]);
+  const [dateQuery, setDateQuery] = useState("latest");
   const [pagination, setPagination] = useState({
     pageIndex: 0,
     pageSize: 5,
@@ -25,11 +26,12 @@ function WorkProgress() {
   let {
     isLoading,
     isError,
+    refetch,
     data: workListHR = [],
   } = useQuery({
     queryKey: ["AllWorkListHR"],
     queryFn: async () => {
-      let result = await axiosSecure.get("/worksheet-hr");
+      let result = await axiosSecure.get(`/query/search/date/?q=${dateQuery}`);
       return result.data;
     },
   });
@@ -70,6 +72,12 @@ function WorkProgress() {
     }
 
     return null;
+  }
+
+  function handleDateFilter(e) {
+    e.preventDefault();
+    setDateQuery(e.target.value);
+    refetch();
   }
 
   const columnHelper = createColumnHelper();
@@ -141,7 +149,23 @@ function WorkProgress() {
 
   return (
     <div className="flex flex-col items-center justify-center mx-[3%]">
-      <h2 className="text-center py-5  text-3xl font-bold">Work Progress</h2>
+      <div className="w-full flex justify-between items-center gap-2">
+        <h2 className=" py-5  text-3xl font-bold">Work Progress</h2>
+        <div className="w-full md:w-fit ">
+          <form className="w-full  max-w-xs">
+            <select
+              value={dateQuery}
+              onChange={handleDateFilter}
+              name="dateFilter1"
+              className="select select-bordered w-full max-w-xs h-4 md:h-12"
+            >
+              <option>latest</option>
+              <option>oldest</option>
+            </select>
+          </form>
+        </div>
+      </div>
+
       <div className="overflow-x-auto w-full">
         <table className="table table-zebra w-full">
           <thead className=" text-white">

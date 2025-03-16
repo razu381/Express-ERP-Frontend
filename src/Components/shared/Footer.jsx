@@ -16,8 +16,8 @@ function Footer() {
     </>
   );
   return (
-    <footer className="bg-gray-100 my-5">
-      <div className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8">
+    <footer className="bg-gray-100 mt-5">
+      <div className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="flex justify-center text-teal-600">
           <img
             src="https://i.ibb.co.com/PzGf5QgP/employeemanagement.png"

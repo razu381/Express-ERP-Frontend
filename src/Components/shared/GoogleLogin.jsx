@@ -49,7 +49,7 @@ function GoogleLogin({ title }) {
   }
 
   return (
-    <div className="btn btn-outline border-yellow-600" onClick={handleGoogle}>
+    <div className="btn btn-outline border-yellow-600 " onClick={handleGoogle}>
       <FcGoogle /> {title} with google
     </div>
   );

@@ -13,7 +13,7 @@ function Newsletter() {
     });
   }
   return (
-    <section className="bg-gray-100 my-10 rounded-xl">
+    <section className="bg-gray-100 my-10 rounded-sm">
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
           <h2 className="text-2xl font-bold text-california-900 md:text-3xl">
@@ -41,14 +41,14 @@ function Newsletter() {
               <input
                 type="email"
                 placeholder="Email address"
-                className="w-full rounded-md border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
+                className="w-full rounded-sm border-gray-200 bg-white p-3 text-gray-700 shadow-sm transition focus:border-white focus:outline-none focus:ring focus:ring-yellow-400"
                 required
               />
             </div>
 
             <button
               type="submit"
-              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-md bg-indigo-500 px-5 py-3 text-white transition focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
+              className="group mt-4 flex w-full items-center justify-center gap-2 rounded-sm bg-indigo-500 px-5 py-3 text-white transition hover:bg-indigo-700 focus:outline-none focus:ring focus:ring-yellow-400 sm:mt-0 sm:w-auto"
             >
               <span className="text-sm font-medium"> Sign Up </span>
 

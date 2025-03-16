@@ -10,7 +10,7 @@ function Services() {
       <Divider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* service 1 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Web
@@ -30,7 +30,7 @@ function Services() {
           </div>
         </div>
         {/* //service 2 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Web
@@ -49,7 +49,7 @@ function Services() {
           </div>
         </div>
         {/* //service 3 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Graphic
@@ -69,7 +69,7 @@ function Services() {
           </div>
         </div>
         {/* //service 4 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               SEO
@@ -88,7 +88,7 @@ function Services() {
           </div>
         </div>
         {/* //service 5 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Marketing
@@ -107,7 +107,7 @@ function Services() {
           </div>
         </div>
         {/* //service 6 */}
-        <div className="rounded-xl bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
+        <div className="rounded-sm bg-white p-4 ring-3 ring-indigo-50 sm:p-6 lg:p-8">
           <div>
             <strong className="rounded-sm border border-indigo-500 bg-indigo-500 px-3 py-1.5 text-[10px] font-medium text-white">
               Marketing
