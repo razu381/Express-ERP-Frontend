@@ -2,23 +2,27 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
 import { toast } from "react-toastify";
-import axios from "axios";
 
 function Header() {
   let { user, LogOut } = useContext(AuthContext);
   let [displayLogOut, setDisplayLogOut] = useState(false);
-  //console.log(user?.email, user?.displayName);
 
   let menuItems = (
     <>
       <li>
-        <Link to="/">Home</Link>
+        <Link to="/" className="font-semibold ">
+          Home
+        </Link>
       </li>
       <li>
-        <Link to="/dashboard/profile">Dashboard</Link>
+        <Link to="/dashboard/profile" className="font-semibold ">
+          Dashboard
+        </Link>
       </li>
       <li>
-        <Link to="/contact">Contact us</Link>
+        <Link to="/contact" className="font-semibold ">
+          Contact us
+        </Link>
       </li>
     </>
   );
@@ -60,8 +64,8 @@ function Header() {
               {menuItems}
             </ul>
           </div>
-          <a className="btn text-california-600 btn-ghost text-xl lg:text-2xl italic">
-            Express ERP
+          <a className="text-california-600 font-bold text-indigo-600 text-xl lg:text-2xl italic">
+            EXPRESS ERP
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
