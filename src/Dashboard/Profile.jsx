@@ -47,7 +47,7 @@ function Profile() {
               <li> - You can pay all employess and increase their salary</li>
             </ul>
           )}
-          {userRole?.role === "Hr" && (
+          {userRole?.role === "HR" && (
             <ul>
               <li>- You can mointor all works done by employee and filter</li>
               <li>

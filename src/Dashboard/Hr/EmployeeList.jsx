@@ -223,7 +223,7 @@ function EmployeeList() {
             ))}
           </tbody>
         </table>
-        <div className="flex justify-between">
+        <div className="flex justify-between mt-5">
           <div className="pagination-controls flex gap-3">
             <button
               onClick={() => table.firstPage()}

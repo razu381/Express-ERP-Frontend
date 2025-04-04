@@ -65,7 +65,7 @@ function Dashboard() {
       .catch((err) => console.log(err));
   }
   return (
-    <div>
+    <div className="">
       <ToastContainer />
       <div className=" bg-gray-100 px-[3%]">
         <div className="p-5  flex justify-between items-center max-w-full px-5 lg:max-w-[1140px] mx-auto">
@@ -101,7 +101,7 @@ function Dashboard() {
           </div>
         </div>
       </div>
-      <div className="max-w-full px-5 lg:max-w-[1140px] mx-auto">
+      <div className="max-w-full px-5 lg:max-w-[1140px] mx-auto min-h-[600px]">
         <Outlet />
       </div>
       <Footer />

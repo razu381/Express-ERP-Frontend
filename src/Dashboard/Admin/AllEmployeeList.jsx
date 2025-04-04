@@ -46,7 +46,7 @@ function AllEmployeeList() {
       text: "You won't be able to revert this!",
       icon: "warning",
       showCancelButton: true,
-      confirmButtonColor: "#3085d6",
+      confirmButtonColor: "#615fff",
       cancelButtonColor: "#d33",
       confirmButtonText: "Yes",
     }).then((result) => {
@@ -74,6 +74,8 @@ function AllEmployeeList() {
     console.log(salary);
     Swal.fire({
       title: "Increase salary",
+      confirmButtonColor: "#615fff",
+      cancelButtonColor: "#d33",
       input: "number",
       inputValue: salary,
       inputAttributes: {
@@ -201,7 +203,7 @@ function AllEmployeeList() {
   }
 
   return (
-    <div className="flex flex-col items-center justify-center mx-[3%] py-10">
+    <div className="flex flex-col items-center justify-center w-full mx-[3%] py-10">
       <div className="flex items-center justify-between w-full">
         <h2 className="text-center py-5 text-xl md:text-3xl font-bold">
           All Employee List
