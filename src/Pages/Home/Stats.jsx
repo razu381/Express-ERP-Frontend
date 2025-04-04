@@ -1,13 +1,19 @@
 import React from "react";
+import { easeOut, motion } from "motion/react";
 
 function Stats() {
   return (
     <div>
       <div className="mx-auto max-w-screen-xl mt-7 px-4 py-8 sm:px-6 sm:py-20 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="text-3xl font-bold text-gray-900 sm:text-4xl">
+          <motion.h2
+            className="text-3xl font-bold text-gray-900 sm:text-4xl"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: easeOut }}
+          >
             Trusted by Customers Around The World
-          </h2>
+          </motion.h2>
 
           <p className="mt-4 text-gray-500 sm:text-xl">
             We have happy and loyal customers from 50+ countries and 5

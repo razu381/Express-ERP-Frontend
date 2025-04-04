@@ -6,13 +6,19 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import Divider from "../../Components/shared/Divider";
+import { easeOut, motion } from "motion/react";
 
 function Testimonials() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20">
+      <motion.h2
+        className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         Testimonials
-      </h2>
+      </motion.h2>
       <Divider />
       <div>
         <Swiper

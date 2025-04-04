@@ -1,5 +1,6 @@
 import React from "react";
 import Swal from "sweetalert2";
+import { easeOut, motion } from "motion/react";
 
 function Newsletter() {
   function handleNewsletter(e) {
@@ -16,9 +17,14 @@ function Newsletter() {
     <section className="bg-gray-100 my-10 lg:my-20 rounded-sm">
       <div className="p-8 md:p-12 lg:px-16 lg:py-24">
         <div className="mx-auto max-w-lg text-center">
-          <h2 className="text-2xl font-bold text-california-900 md:text-3xl">
+          <motion.h2
+            className="text-2xl font-bold text-california-900 md:text-3xl"
+            initial={{ opacity: 0, y: -50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, ease: easeOut }}
+          >
             Stay Updated with the Best Recommendations!
-          </h2>
+          </motion.h2>
 
           <p className="hidden text-gray-500 sm:mt-4 sm:block">
             Subscribe to our newsletter and never miss out on top product

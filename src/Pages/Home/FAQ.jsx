@@ -1,12 +1,18 @@
 import React from "react";
 import Divider from "../../Components/shared/Divider";
+import { easeOut, motion } from "motion/react";
 
 function FAQ() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl">
+      <motion.h2
+        className="font-bold text-center text-xl md:text-2xl lg:text-3xl"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         FAQ
-      </h2>
+      </motion.h2>
       <Divider />
       <div className="space-y-4 mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
         <details

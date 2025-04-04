@@ -1,12 +1,18 @@
 import React from "react";
 import Divider from "../../Components/shared/Divider";
+import { easeOut, motion } from "motion/react";
 
 function Services() {
   return (
     <div>
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20">
+      <motion.h2
+        className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         Other services
-      </h2>
+      </motion.h2>
       <Divider />
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {/* service 1 */}

@@ -1,13 +1,19 @@
 import React from "react";
 import Divider from "../../Components/shared/Divider";
 import { Link } from "react-router-dom";
+import { easeOut, motion } from "motion/react";
 
 function AboutUs() {
   return (
     <div className="">
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20">
+      <motion.h2
+        className="font-bold text-center text-xl md:text-2xl lg:text-3xl pt-10 lg:pt-20"
+        initial={{ opacity: 0, y: -50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: easeOut }}
+      >
         About us
-      </h2>
+      </motion.h2>
       <Divider />
 
       <section className="overflow-hidden  sm:grid sm:grid-cols-1 lg:grid-cols-2 sm:items-center sm:justify-center">
